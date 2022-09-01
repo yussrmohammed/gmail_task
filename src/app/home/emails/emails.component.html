@@ -1,0 +1,166 @@
+<mat-tab-group>
+    <mat-tab label="Primary"> 
+    
+      <mat-paginator [pageSizeOptions]="[2,4]"
+      showFirstLastButtons 
+      aria-label="Select page of periodic elements">
+      </mat-paginator>
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table"  >
+
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef> Actions </th>
+          <td mat-cell *matCellDef="let element">
+         
+<mat-button-toggle mat-icon-button aria-label="star"     > 
+
+                <fa-icon [icon]="['fas' , 'star']"></fa-icon> 
+               </mat-button-toggle> 
+               
+                
+               
+              <mat-button-toggle-group mat-icon-button aria-label="mark as read"  #group="matButtonToggleGroup" >
+                <mat-button-toggle value="envelope"  #true_btn  (click)="update_toggle(true_btn)" *ngIf=" group.value =='envelope'" >
+                <fa-icon [icon]="['fas' ,true_btn.value ]"  ></fa-icon>
+              </mat-button-toggle>
+              <mat-button-toggle  value="envelope-open"   #false_btn (click)="update_toggle(false_btn)" >
+                <fa-icon [icon]="['fas' , false_btn.value ]"  ></fa-icon>
+          </mat-button-toggle> 
+           </mat-button-toggle-group>
+          </td>
+            
+  
+        </ng-container>
+
+
+        <ng-container matColumnDef="sender"   >
+          <th mat-header-cell *matHeaderCellDef> sender </th>
+          <td mat-cell *matCellDef="let element" > {{element.sender}} </td>
+        </ng-container>
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="subject" >
+          <th mat-header-cell *matHeaderCellDef>subject </th>
+          <td mat-cell *matCellDef="let element" > {{element.subject | slice:0:100}} </td>
+        </ng-container>
+      
+        <!-- Weight Column -->
+        <ng-container matColumnDef="description">
+          <th mat-header-cell *matHeaderCellDef> description </th>
+          <td mat-cell *matCellDef="let element"> {{element.description | slice:0:100}} </td>
+        </ng-container>
+      
+
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"  ></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"  ></tr>
+      </table>
+    
+    </mat-tab>
+    <mat-tab label="Promotions"> 
+
+
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table"  >
+
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef> Actions </th>
+          <td mat-cell *matCellDef="let element">
+         
+<mat-button-toggle mat-icon-button aria-label="star"     > 
+
+                <fa-icon [icon]="['fas' , 'star']"></fa-icon> 
+               </mat-button-toggle> 
+               
+                
+               
+              <mat-button-toggle-group mat-icon-button aria-label="mark as read"  #group="matButtonToggleGroup" >
+                <mat-button-toggle value="envelope"  #true_btn  (click)="update_toggle(true_btn)" *ngIf=" group.value =='envelope'" >
+                <fa-icon [icon]="['fas' ,true_btn.value ]"  ></fa-icon>
+              </mat-button-toggle>
+              <mat-button-toggle  value="envelope-open"   #false_btn (click)="update_toggle(false_btn)" >
+                <fa-icon [icon]="['fas' , false_btn.value ]"  ></fa-icon>
+          </mat-button-toggle> 
+           </mat-button-toggle-group>
+          </td>
+            
+  
+        </ng-container>
+
+
+        <ng-container matColumnDef="sender"   >
+          <th mat-header-cell *matHeaderCellDef> sender </th>
+          <td mat-cell *matCellDef="let element" > {{element.sender}} </td>
+        </ng-container>
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="subject" >
+          <th mat-header-cell *matHeaderCellDef>subject </th>
+          <td mat-cell *matCellDef="let element" > {{element.subject | slice:0:100}} </td>
+        </ng-container>
+      
+        <!-- Weight Column -->
+        <ng-container matColumnDef="description">
+          <th mat-header-cell *matHeaderCellDef> description </th>
+          <td mat-cell *matCellDef="let element"> {{element.description | slice:0:100}} </td>
+        </ng-container>
+      
+
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"  ></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"  ></tr>
+      </table>
+
+    </mat-tab>
+    <mat-tab label="Social"> 
+
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table"  >
+
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef> Actions </th>
+          <td mat-cell *matCellDef="let element">
+         
+<mat-button-toggle mat-icon-button aria-label="star"     > 
+
+                <fa-icon [icon]="['fas' , 'star']"></fa-icon> 
+               </mat-button-toggle> 
+               
+                
+               
+              <mat-button-toggle-group mat-icon-button aria-label="mark as read"  #group="matButtonToggleGroup" >
+                <mat-button-toggle value="envelope"  #true_btn  (click)="update_toggle(true_btn)" *ngIf=" group.value =='envelope'" >
+                <fa-icon [icon]="['fas' ,true_btn.value ]"  ></fa-icon>
+              </mat-button-toggle>
+              <mat-button-toggle  value="envelope-open"   #false_btn (click)="update_toggle(false_btn)" >
+                <fa-icon [icon]="['fas' , false_btn.value ]"  ></fa-icon>
+          </mat-button-toggle> 
+           </mat-button-toggle-group>
+          </td>
+            
+  
+        </ng-container>
+
+
+        <ng-container matColumnDef="sender"   >
+          <th mat-header-cell *matHeaderCellDef> sender </th>
+          <td mat-cell *matCellDef="let element" > {{element.sender}} </td>
+        </ng-container>
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="subject" >
+          <th mat-header-cell *matHeaderCellDef>subject </th>
+          <td mat-cell *matCellDef="let element" > {{element.subject | slice:0:100}} </td>
+        </ng-container>
+      
+        <!-- Weight Column -->
+        <ng-container matColumnDef="description">
+          <th mat-header-cell *matHeaderCellDef> description </th>
+          <td mat-cell *matCellDef="let element"> {{element.description | slice:0:100}} </td>
+        </ng-container>
+      
+
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"  ></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"  ></tr>
+      </table>
+      
+    </mat-tab>
+  </mat-tab-group>

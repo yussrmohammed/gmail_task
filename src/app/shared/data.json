@@ -1,0 +1,84 @@
+{
+
+    "items":[
+        {
+            "name":"Inbox",
+            "id":1,
+            "prefix":"fas",
+            "icon":"inbox"
+        },
+        {
+            "name":"Starred",
+            "id":2,
+            "prefix":"fas",
+            "icon":"star"
+        },
+        {
+            "name":"Snoozed",
+            "id":3,
+            "prefix":"fas",
+            "icon":"clock"
+        },
+        {
+            "name":"Important",
+            "id":4,
+            "prefix":"fas",
+            "icon":"circle-exclamation"
+
+        },
+        {
+            "name":"Sent",
+            "id":5,
+            "prefix":"fas",
+            "icon":"paper-plane"
+        }
+    ],
+    "treeitems":[
+        {"name":"Categories",
+        "id":1,
+        "children":[
+            {"name": "Social"},
+            {"name": "Updates"},
+            {"name": "Forums"},
+            {"name":"Promotions"}
+        ]
+    
+    }
+    ],
+    "emails":[
+        {"id":1,
+        "sender":"Quora Digest",
+        "subject":"If piracy is illegal, then how are torrent sites so easily accessible and still up an...?",
+        "description":""
+
+    
+    },
+    {"id":2,
+    "sender":"Course Hero",
+    "subject":"Updates to our Privacy Policy",
+    "description":"We value your privacy, and want to let you know about upcoming changes to our Privacy Policy which will go into effect on November 1, 2022."
+
+
+    },
+    {"id":3,
+    "sender":"Turing - U.S. Software Jobs",
+    "subject":"Good news! You are pre-approved to create a Deep Developer Profile!",
+    "description":"Hi you are an ideal candidate to create a Deep Developer profile on Turing. We recommend you upload your resume at the earliest to bag attractive opportunities with US-based tech companies.  "
+
+
+
+    },
+    {"id":4,
+    "sender":"Coursera",
+    "subject":"Learn a new skill in under 2 days",
+    "description":" Beginner courses you can finish in 2 days"
+
+
+    }
+
+
+
+
+    
+    ]
+}

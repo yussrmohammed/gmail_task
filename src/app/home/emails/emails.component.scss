@@ -1,0 +1,31 @@
+.table {
+    width: 100%;
+  }
+  
+  .mat-column-subject {
+    
+   
+    padding-right: 20px;
+    text-align: center;
+  }
+  
+  .mat-column-sender {
+    border-right: 1px solid currentColor;
+    font-size: 20px;
+  }
+  
+  .mat-column-description {
+    font-style: italic;
+  }
+  .notclicked{
+    color:black ;
+  }
+  .mat-button-toggle-checked{
+    color: yellow;
+  }
+  .readed{
+    font-style:italic
+  }
+  .notreaded{
+    font-weight: bolder;
+  }
