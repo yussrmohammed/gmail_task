@@ -11,7 +11,7 @@
           <th mat-header-cell *matHeaderCellDef> Actions </th>
           <td mat-cell *matCellDef="let element">
          
-<mat-button-toggle mat-icon-button aria-label="star"     > 
+<mat-button-toggle mat-icon-button aria-label="star" #star_btn (click)="starToggle(star_btn)"    > 
 
                 <fa-icon [icon]="['fas' , 'star']"></fa-icon> 
                </mat-button-toggle> 
@@ -19,11 +19,11 @@
                 
                
               <mat-button-toggle-group mat-icon-button aria-label="mark as read"  #group="matButtonToggleGroup" >
-                <mat-button-toggle value="envelope"  #true_btn  (click)="update_toggle(true_btn)" *ngIf=" group.value =='envelope'" >
-                <fa-icon [icon]="['fas' ,true_btn.value ]"  ></fa-icon>
+                <mat-button-toggle value="envelope"  #readed_btn  (click)="readedToggle(readed_btn)" *ngIf=" group.value =='envelope'" >
+                <fa-icon [icon]="['fas' ,readed_btn.value ]"  ></fa-icon>
               </mat-button-toggle>
-              <mat-button-toggle  value="envelope-open"   #false_btn (click)="update_toggle(false_btn)" >
-                <fa-icon [icon]="['fas' , false_btn.value ]"  ></fa-icon>
+              <mat-button-toggle  value="envelope-open"   #notreaded_btn (click)="readedToggle(notreaded_btn)" >
+                <fa-icon [icon]="['fas' , notreaded_btn.value ]"  ></fa-icon>
           </mat-button-toggle> 
            </mat-button-toggle-group>
           </td>
@@ -65,7 +65,7 @@
           <th mat-header-cell *matHeaderCellDef> Actions </th>
           <td mat-cell *matCellDef="let element">
          
-<mat-button-toggle mat-icon-button aria-label="star"     > 
+            <mat-button-toggle mat-icon-button aria-label="star"  #star_btn (click)="starToggle(star_btn)"  > 
 
                 <fa-icon [icon]="['fas' , 'star']"></fa-icon> 
                </mat-button-toggle> 
@@ -73,12 +73,10 @@
                 
                
               <mat-button-toggle-group mat-icon-button aria-label="mark as read"  #group="matButtonToggleGroup" >
-                <mat-button-toggle value="envelope"  #true_btn  (click)="update_toggle(true_btn)" *ngIf=" group.value =='envelope'" >
-                <fa-icon [icon]="['fas' ,true_btn.value ]"  ></fa-icon>
+                <mat-button-toggle value="envelope"  #readed_btn  (click)="readedToggle(readed_btn)" *ngIf=" group.value =='envelope'" >
+                <fa-icon [icon]="['fas' ,readed_btn.value ]"  ></fa-icon>
               </mat-button-toggle>
-              <mat-button-toggle  value="envelope-open"   #false_btn (click)="update_toggle(false_btn)" >
-                <fa-icon [icon]="['fas' , false_btn.value ]"  ></fa-icon>
-          </mat-button-toggle> 
+ 
            </mat-button-toggle-group>
           </td>
             
@@ -126,11 +124,11 @@
                 
                
               <mat-button-toggle-group mat-icon-button aria-label="mark as read"  #group="matButtonToggleGroup" >
-                <mat-button-toggle value="envelope"  #true_btn  (click)="update_toggle(true_btn)" *ngIf=" group.value =='envelope'" >
-                <fa-icon [icon]="['fas' ,true_btn.value ]"  ></fa-icon>
+                <mat-button-toggle value="envelope"  #readed_btn  (click)="readedToggle(readed_btn)" *ngIf=" group.value =='envelope'" >
+                <fa-icon [icon]="['fas' ,readed_btn.value ]"  ></fa-icon>
               </mat-button-toggle>
-              <mat-button-toggle  value="envelope-open"   #false_btn (click)="update_toggle(false_btn)" >
-                <fa-icon [icon]="['fas' , false_btn.value ]"  ></fa-icon>
+              <mat-button-toggle  value="envelope-open"   #notreaded_btn (click)="readedToggle(notreaded_btn)" >
+                <fa-icon [icon]="['fas' , notreaded_btn.value ]"  ></fa-icon>
           </mat-button-toggle> 
            </mat-button-toggle-group>
           </td>

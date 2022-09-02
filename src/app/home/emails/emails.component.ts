@@ -41,7 +41,7 @@ dataSource=new MatTableDataSource<IEmails>()
   }
   
 
-  update_toggle(button:MatButtonToggle){
+  readedToggle(button:MatButtonToggle){
     
     if(button.value=="envelope"){
      button.value='envelope-open'
@@ -56,6 +56,23 @@ dataSource=new MatTableDataSource<IEmails>()
         
     }
 button.checked=!button.checked
+}
+starToggle(btn:MatButtonToggle){
+  if(btn.checked){
+    btn._buttonElement.nativeElement.parentElement?.classList.add('stared')
+    console.log(btn._buttonElement.nativeElement.parentElement?.classList)
+    
+  }
+else{
+  btn._buttonElement.nativeElement.parentElement?.classList.remove('stared')
+  
+
+}
+
+
+  
+  
+
 }
   
 
